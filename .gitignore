@@ -35,4 +35,4 @@ build/
 src/main/resources/application-local.properties
 
 ### DB SQLite ###
-init_docker_dbb/mspr_kawa_API_clients.sqlite
+init_docker_db/*
