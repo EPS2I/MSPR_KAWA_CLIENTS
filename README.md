@@ -20,7 +20,7 @@ Voici les lignes a remettre dans votre fichier perso et adapter à votre BDD
     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 ## Docker
-Ajouter le dossier init_docker_dbb à la racine pour recevoir le fichier de la bdd SQLite.
+Ajouter le dossier init_docker_db à la racine pour recevoir le fichier de la bdd SQLite.
 
 **Se placer à la racine du projet pour executer les commandes suivantes.**
 
