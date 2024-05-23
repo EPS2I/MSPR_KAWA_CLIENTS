@@ -21,7 +21,7 @@ public class WebSecurityConfig {
 
         http
                 .oauth2ResourceServer()
-                    .jwt();
+                .jwt();
 
         http
                 .sessionManagement()

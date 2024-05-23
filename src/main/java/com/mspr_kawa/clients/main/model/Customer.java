@@ -4,29 +4,10 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UuidGenerator;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDateTime;
-import java.util.Objects;
+import java.util.Date;
 import java.util.UUID;
-
-// visualisation of object Customer
-//    id	"11"
-//    name	"Krista Crooks"
-//    username	"Gerald_Hansen"
-//    firstName	"Gabriel"
-//    lastName	"Connelly"
-//    address
-//        postalCode	"84288"
-//        city	"Heaneyfort"
-//    profile
-//        firstName	"Dorthy"
-//        lastName	"Herman"
-//    company
-//        companyName	"Steuber - Wilderman"
-//    createdAt	"2024-04-18T16:28:23.736Z"
 
 @Entity
 @Data
@@ -50,9 +31,7 @@ public class Customer {
     @Embedded
     private ProfileCustomer profile;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @CreationTimestamp
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "company_id", referencedColumnName = "id")
