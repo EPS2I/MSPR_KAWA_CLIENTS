@@ -24,4 +24,11 @@ public class ProfileCustomer {
     private String firstName;
     @Transient
     private String lastName;
+
+    public void setPhoneNumber(String s) {
+    }
+
+    public void setEmail(String mail) {
+
+    }
 }
