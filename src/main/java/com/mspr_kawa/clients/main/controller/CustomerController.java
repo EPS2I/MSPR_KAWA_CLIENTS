@@ -41,6 +41,16 @@ public class CustomerController {
     // Endpoint pour créer un nouveau client
     @PostMapping
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
+        if (customer.getFirstName() == null || customer.getFirstName().isEmpty()) {
+            throw new IllegalArgumentException("firstName is required");
+        }
+        if (customer.getLastName() == null || customer.getLastName().isEmpty()) {
+            throw new IllegalArgumentException("lastName is required");
+        }
+        if (customer.getUsername() == null || customer.getUsername().isEmpty()) {
+            throw new IllegalArgumentException("username is required");
+        }
+
         Customer createdCustomer = customerService.createCustomer(customer);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdCustomer);
     }
