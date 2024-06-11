@@ -21,4 +21,11 @@ public class Company {
     @UuidGenerator
     private UUID id;
     private String companyName;
+
+    public void setName(String doeIndustries) {
+    }
+
+    public void setAddress(Adress address) {
+
+    }
 }

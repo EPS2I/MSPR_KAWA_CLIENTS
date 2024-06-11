@@ -20,4 +20,11 @@ public class Adress {
     private UUID id;
     private String postalCode;
     private String city;
+
+    public void setStreet(String s) {
+    }
+
+    public void setCountry(String usa) {
+
+    }
 }
