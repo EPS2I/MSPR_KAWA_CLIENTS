@@ -27,8 +27,13 @@ public class ApplicationStartUp {
 
     @EventListener(ApplicationReadyEvent.class)
     public void onApplicationEvent() throws IOException {
-        logger.info("\n\n application start do fetch client from main db:\n\n");
-        List<Customer> customerList = customerSyncService.fetchClientsFromMainDb();
-        customerRepository.saveAll(customerList);
+        logger.info("Application started, fetching clients from main db...");
+        try {
+            List<Customer> customerList = customerSyncService.fetchClientsFromMainDb();
+            customerRepository.saveAll(customerList);
+            logger.info("Fetched and saved {} customers from main db.", customerList.size());
+        } catch (Exception e) {
+            logger.error("Error fetching clients from main db", e);
+        }
     }
 }
