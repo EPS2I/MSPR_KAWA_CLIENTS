@@ -1,6 +1,6 @@
 package com.mspr_kawa.clients.main.controller;
 
-import com.mspr_kawa.clients.main.rabbitMQ.RabbitMQProducer;
+import com.mspr_kawa.clients.main.rabbitmq.RabbitMQProducer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

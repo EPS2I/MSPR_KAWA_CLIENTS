@@ -2,7 +2,6 @@ package com.mspr_kawa.clients.main.db_services;
 
 import com.mspr_kawa.clients.main.model.Customer;
 import com.mspr_kawa.clients.main.security.KeycloakConfigCustom;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -30,7 +29,6 @@ public class CustomerSyncService {
 
     private final KeycloakConfigCustom keycloakConfigCustom;
 
-    @Autowired
     public CustomerSyncService(RestTemplate restTemplate, KeycloakConfigCustom keycloakConfigCustom) {
         this.restTemplate = restTemplate;
         this.keycloakConfigCustom = keycloakConfigCustom;

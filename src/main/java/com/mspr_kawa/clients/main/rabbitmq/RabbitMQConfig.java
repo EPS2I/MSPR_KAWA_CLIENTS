@@ -1,4 +1,4 @@
-package com.mspr_kawa.clients.main.rabbitMQ;
+package com.mspr_kawa.clients.main.rabbitmq;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -31,6 +31,5 @@ public class RabbitMQConfig {
     public Binding binding() {
         return BindingBuilder.bind(queue()).to(topicExchange()).with(routingKey);
     }
-
 
 }
