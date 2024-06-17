@@ -34,4 +34,4 @@ Faire un `mvn clean install` puis start MainApplication.java et vérifier dans t
 
     docker run --name mspr_kawa_XXXXX -d -p 8080:8080 mspr_kawa_XXXXX
 
-Test de jenkins
+Test 
